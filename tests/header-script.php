@@ -5,7 +5,7 @@ Env::init( '/app-config.php' );
 
 function toHtml( $something ): string
 {
-    $html = '<pre style="with:100%;">';
+    $html = '<pre style="display: block; height: 100%; width:100%; overflow: auto;">';
     if( is_null( $something ) )
     {
         $html .= 'NULL';

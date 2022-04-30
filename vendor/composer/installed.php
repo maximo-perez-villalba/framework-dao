@@ -1,7 +1,7 @@
 <?php return array(
     'root' => array(
-        'pretty_version' => '1.0.0',
-        'version' => '1.0.0.0',
+        'pretty_version' => '0.9.0',
+        'version' => '0.9.0.0',
         'type' => 'library',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
@@ -10,9 +10,18 @@
         'dev' => true,
     ),
     'versions' => array(
+        'cebe/markdown' => array(
+            'pretty_version' => '1.2.1',
+            'version' => '1.2.1.0',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../cebe/markdown',
+            'aliases' => array(),
+            'reference' => '9bac5e971dd391e2802dca5400bbeacbaea9eb86',
+            'dev_requirement' => false,
+        ),
         'maximo-perez-villalba/framework-dao' => array(
-            'pretty_version' => '1.0.0',
-            'version' => '1.0.0.0',
+            'pretty_version' => '0.9.0',
+            'version' => '0.9.0.0',
             'type' => 'library',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),

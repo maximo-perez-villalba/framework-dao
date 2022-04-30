@@ -44,7 +44,7 @@ class Alumno extends Persistent
     {
         return new AlumnoDAO( $this );
     }
-    
+
     /**
      * 
      * {@inheritDoc}

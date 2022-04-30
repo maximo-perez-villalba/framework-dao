@@ -81,9 +81,26 @@ class AlumnoDAO extends DAODB
         
     }
     
+    /**
+     * 
+     * {@inheritDoc}
+     * @see \framework\dao\DAO::update()
+     */
     public function update(): bool
     {
-        return TRUE;
+        $sqlQuery = 'UPDATE ';
+        $sqlQuery .= self::tableName();
+        $sqlQuery .= ' SET nombres = :nombres, apellidos = :apellidos, email = :email WHERE uid = :uid ';
+        $statement = self::connection()->prepare( $sqlQuery );
+        
+        $parameters = [
+            ':nombres' => $this->object()->nombres(),
+            ':apellidos' => $this->object()->apellidos(),
+            ':email' => $this->object()->email(),
+            ':uid' => $this->object()->uid()
+        ];
+        
+        return $statement->execute( $parameters );
     }
     
     /**
@@ -106,4 +123,13 @@ class AlumnoDAO extends DAODB
         return self::list( 'email LIKE :pattern', [ ':pattern' => $pattern ] );
     }
     
+    /**
+     * 
+     * @param string $email
+     * @return Alumno|NULL
+     */
+    static public function getObjectByEmail( string $email ): ?Alumno
+    {
+        return self::getObject( 'email = :email', [ ':email' => $email ] );
+    }
 }

@@ -24,7 +24,7 @@ abstract class DAODB extends DAO
 
     /**
      * 
-     * @return PDO|NULL
+     * @return PDO
      */
     static protected function connection(): PDO
     {
@@ -42,6 +42,15 @@ abstract class DAODB extends DAO
     abstract static public function tableName(): string;
     
     /**
+     * 
+     * @return string
+     */
+    public function getTableName(): string
+    {
+        return static::tableName();
+    }
+    
+    /**
      * {@inheritDoc}
      * @see \framework\dao\DAO::create()
      */
@@ -56,11 +65,10 @@ abstract class DAODB extends DAO
      */
     public function delete(): bool
     {
-        $sql = 'DELETE FROM '.static::tableName().' WHERE id = :id ';
+        $sql = 'DELETE FROM '.static::tableName().' WHERE uid = :uid ';
         $statement = self::connection()->prepare( $sql );
         
-        $parameters = [ ':id' => $this->object()->uid() ];
-        
+        $parameters = [ ':uid' => $this->object()->uid() ];
         return $statement->execute( $parameters );
     }
 
@@ -164,6 +172,5 @@ abstract class DAODB extends DAO
      * @return bool
      */
     abstract public function insert(): bool; 
-
     
 }
