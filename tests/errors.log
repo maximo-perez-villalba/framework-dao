@@ -1,0 +1,21 @@
+[30-Apr-2022 01:10:20 America/Argentina/Buenos_Aires] PHP Fatal error:  Uncaught PDOException: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry 'marcos.baldivia@prueba.com' for key 'email' in /home/davinci/Documentos/Diseño de sistemas/workspace/www/framework-dao/tests/src/tests/dao/AlumnoDAO.php:73
+Stack trace:
+#0 /home/davinci/Documentos/Diseño de sistemas/workspace/www/framework-dao/tests/src/tests/dao/AlumnoDAO.php(73): PDOStatement->execute(Array)
+#1 /home/davinci/Documentos/Diseño de sistemas/workspace/www/framework-dao/tests/blocks/create.php(6): tests\dao\AlumnoDAO->insert()
+#2 /home/davinci/Documentos/Diseño de sistemas/workspace/www/framework-dao/tests/index.php(119): include('/home/davinci/D...')
+#3 {main}
+  thrown in /home/davinci/Documentos/Diseño de sistemas/workspace/www/framework-dao/tests/src/tests/dao/AlumnoDAO.php on line 73
+[30-Apr-2022 01:16:16 America/Argentina/Buenos_Aires] PHP Fatal error:  Uncaught PDOException: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry 'marcos.baldivia@prueba.com' for key 'email' in /home/davinci/Documentos/Diseño de sistemas/workspace/www/framework-dao/tests/src/tests/dao/AlumnoDAO.php:73
+Stack trace:
+#0 /home/davinci/Documentos/Diseño de sistemas/workspace/www/framework-dao/tests/src/tests/dao/AlumnoDAO.php(73): PDOStatement->execute(Array)
+#1 /home/davinci/Documentos/Diseño de sistemas/workspace/www/framework-dao/tests/blocks/create.php(6): tests\dao\AlumnoDAO->insert()
+#2 /home/davinci/Documentos/Diseño de sistemas/workspace/www/framework-dao/tests/index.php(115): include('/home/davinci/D...')
+#3 {main}
+  thrown in /home/davinci/Documentos/Diseño de sistemas/workspace/www/framework-dao/tests/src/tests/dao/AlumnoDAO.php on line 73
+[30-Apr-2022 01:26:06 America/Argentina/Buenos_Aires] PHP Fatal error:  Uncaught PDOException: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry 'marcos.baldivia@prueba.com' for key 'email' in /home/davinci/Documentos/Diseño de sistemas/workspace/www/framework-dao/tests/src/tests/dao/AlumnoDAO.php:73
+Stack trace:
+#0 /home/davinci/Documentos/Diseño de sistemas/workspace/www/framework-dao/tests/src/tests/dao/AlumnoDAO.php(73): PDOStatement->execute(Array)
+#1 /home/davinci/Documentos/Diseño de sistemas/workspace/www/framework-dao/tests/blocks/create.php(6): tests\dao\AlumnoDAO->insert()
+#2 /home/davinci/Documentos/Diseño de sistemas/workspace/www/framework-dao/tests/index.php(115): include('/home/davinci/D...')
+#3 {main}
+  thrown in /home/davinci/Documentos/Diseño de sistemas/workspace/www/framework-dao/tests/src/tests/dao/AlumnoDAO.php on line 73

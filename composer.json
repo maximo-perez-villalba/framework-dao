@@ -1,0 +1,30 @@
+{
+	"name": "maximo-perez-villalba/framework-dao",
+	"description": "El proyecto implementa el patrón DAO en PHP con fines pedagógicos.",
+	"type": "library",
+	"license": "proprietary",
+	"authors": [
+		{
+			"name": "Máximo Perez Villalba",
+			"email": "maximo.villalba@gmail.com"
+		}
+	],
+	"version": "0.9.0",
+	"minimum-stability": "stable",
+	"autoload": {
+		"psr-4": {
+			"framework\\dao\\": "src/framework/dao/"
+		}
+	},
+	"autoload-dev": {
+		"psr-4": {
+			"tests\\": "tests/src/tests/"
+		}
+	},
+	"require": {
+		"php": ">=7.4",
+		"maximo-perez-villalba/framework-environment": ">=1"
+	},
+	"require-dev": {},
+	"prefer-stable": true
+}
