@@ -76,6 +76,8 @@ class AlumnoDAO extends DAODB
          */
         $this->object()->uid( self::connection()->lastInsertId() );
         
+        $statement->closeCursor();
+        
         return $results;
     }
     
