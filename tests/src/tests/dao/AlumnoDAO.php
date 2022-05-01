@@ -57,7 +57,6 @@ class AlumnoDAO extends DAODB
      */
     public function insert(): bool
     {
-        
         $sqlQuery = 'INSERT INTO ';
         $sqlQuery .= self::tableName();
         $sqlQuery .= ' (nombres, apellidos, email)';
@@ -78,7 +77,6 @@ class AlumnoDAO extends DAODB
         $this->object()->uid( self::connection()->lastInsertId() );
         
         return $results;
-        
     }
     
     /**
