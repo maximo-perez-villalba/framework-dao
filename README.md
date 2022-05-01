@@ -26,15 +26,15 @@ composer update
 
 ### Patrón DAO
 
-![UML Classes Diagram](/docs/uml-class-dao-pattern.png)
+![image:uml-clas-dao-pattern.png](/docs/uml-class-dao-pattern.png)
 
 ### Extensión DAO para bases de datos DAODB
 
-![UML Classes Diagram](/docs/uml-class-dao-db.png)
+![image:uml-class-dao-db.png](/docs/uml-class-dao-db.png)
 
 
 ### UML Sequence Diagram > DAODB::create
-![UML Sequence Diagram](/docs/uml-sequence-daodb-create.png)
+![image:uml-sequence-daodb-create.png](/docs/uml-sequence-daodb-create.png)
 ```
 <?php
 $alumno = new Alumno( 0, 'Azalea', 'Rojas', 'azalea.rojas@prueba.com' );
