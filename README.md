@@ -2,6 +2,7 @@
 El proyecto implementa un framework liviano de persistencia orientado a objectos escrito en PHP. 
 El framework esta basado en el patrón de diseño DAO (Data Access Object) y aunque su principal fin es pedagógico, el framework es completamente funcional.
 
+
 ## Instalación
 Se puede instalar `framework-dao` a través de Composer.
 
