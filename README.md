@@ -26,7 +26,7 @@ composer update
 
 
 ### Patrón DAO
-El patrón DAO propone una solución al problema de persistir **objetos** en distintos medios de almacenamiento como son xml, json, bases de datos, etc. Buscando independizar **los objetos del modelo** de **los medios concretos donde se persisten** y permitiendo la cohexistencia de multiples medios de almacenamiento paralelos.
+El patrón DAO propone una solución al problema de persistir **objetos** en distintos medios de almacenamiento como son: xml, json, bases de datos relacionales o no, almacenamiento en la nube, etc. Buscando independizar **los objetos del modelo** de **los medios concretos donde se persisten** y permitiendo la cohexistencia de multiples medios de almacenamiento simultaneos.
 
 Al hablar de persistencia de objetos, son 4 las operaciones elementales que son necesarias: 
 * **Guardar** un nuevo objeto
@@ -36,7 +36,7 @@ Al hablar de persistencia de objetos, son 4 las operaciones elementales que son 
 
 Operaciones conocidas por sus siglas en ingles CRUD (Create, Read, Update, Delete).
 
-La implementación del patrón DAO esta basado en el patrón estructural [Decorator](https://es.wikipedia.org/wiki/Decorator_(patr%C3%B3n_de_dise%C3%B1o)). De tal manera que los objetos DAO envuelven a los objetos del modelo. Permitiendo de esta manera un bajo nivel de acoplamiento de **los objetos del modelo** con **los objetos DAO** que saben como se persisten.
+La implementación del patrón DAO esta basado en el patrón estructural [Decorator](https://es.wikipedia.org/wiki/Decorator_(patr%C3%B3n_de_dise%C3%B1o)). De tal manera que los objetos DAO envuelven a los objetos del modelo. Permitiendo de esta manera un bajo nivel de acoplamiento de **los objetos del modelo** con **los objetos DAO** que implementan la lógica de persistencia.
 
 ![image:uml-clas-dao-pattern.png](/docs/uml-class-dao-pattern.png)
 
@@ -48,10 +48,10 @@ El diagrama de clases muestra el diseño de implementación del patrón DAO, pon
 // Para obtener una instancia de la clase DAO.
 $dao = new DAO( $objectPersistent );
 
-// También puedo obtener una instancia de la clase DAO, desde el objeto persistible a través del método dao(). 
+// También puedo obtener una instancia de la clase DAO desde el objeto persistible. 
 $dao = $objectPersistent->dao();
 
-// Para guardar un nuevo objeto de modelo en el medio de almacdenamiento.
+// Para guardar un nuevo objeto de modelo en el medio de almacenamiento.
 $dao->create();
 
 // Para sincronizar los cambios de un objeto de modelo.
@@ -60,11 +60,16 @@ $dao->update();
 // Para borrar un objeto de modelo.
 $dao->delete();
 
-// Para recuperar un objeto de modelo almacenado.
-$List = DAO::read( 'filtro/s de selección', ['argumento1'=>'value1', 'argumentoN'=>'valueN'] );
+// Para recuperar un o más objetos de modelo almacenados.
+$list = DAO::read( 'filtro/s de selección', ['argumento1'=>'value1', 'argumentoN'=>'valueN'] );
 ```
 
-### Extensión DAO para bases de datos DAODB
+De esta manera la clase DAO expone una interfaz de alto nivel, que permite desacoplar **los objetos del modelo** del **medio de almacenamiento**, como así también de la implementación específica para cada medio de almacenamiento.
+
+Este proyecto contiene la implementación del patrón DAO más la extensión para persistir en bases de datos.
+
+
+### Extensión DAO para bases de datos (DAODB)
 
 ![image:uml-class-dao-db.png](/docs/uml-class-dao-db.png)
 
