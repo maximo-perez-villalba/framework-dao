@@ -23,8 +23,14 @@ composer update
 ```
 ## Documentación
 
+
 ### UML Classes Diagram
 ![UML Classes Diagram](/docs/uml-class-dao-pattern.png)
+
+
+### UML Classes Diagram
+![UML Classes Diagram](/docs/uml-class-dao-db.png)
+
 
 ### UML Sequence Diagram
 ![UML Sequence Diagram](/docs/uml-sequence-daodb-insert.png)
