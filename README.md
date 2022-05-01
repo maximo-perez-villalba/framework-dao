@@ -41,20 +41,22 @@ La implementación del patrón DAO esta basado en el patrón estructural [Decora
 ![image:uml-clas-dao-pattern.png](/docs/uml-class-dao-pattern.png)
 
 El diagrama de clases muestra el diseño de implementación del patrón DAO, poniendo todo el comportamiento CRUD dentro de la clase **DAO** y requiriendo de **los objetos del modelo** extender de la clase [Persistent](/src/framework/dao/Persistent.php) (persistible).
+
+#### Como usar
 ```
 <?php
-// 
+// Para obtener una instancia de la clase DAO.
 $dao = new DAO( $objectPersistent );
-// o también puedo obtener el objeto de la clase DAO desde el objeto persistible, a través del método dao(). 
+// O también puedo obtener una instancia de la clase DAO desde el objeto persistible, a través del método dao(). 
 $dao = $objectPersistent->dao();
 
-//
+// Para guardar un nuevo objeto de modelo en el medio de almacdenamiento.
 $dao->create();
 
-//
+// Para sincronizar los cambios de un objeto de modelo.
 $dao->update();
 
-//
+// Para borrar un objeto de modelo.
 $dao->delete();
 
 ```
