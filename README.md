@@ -40,7 +40,7 @@ La implementación del patrón DAO esta basado en el patrón estructural [Decora
 
 ![image:uml-clas-dao-pattern.png](/docs/uml-class-dao-pattern.png)
 
-El diagrama de clases de muestra la implementación del patrón DAO, poniendo todo el comportamiento CRUD dentro de la clase DAO y requiriendo de los objetos del modelo extender de la Persistent (persistible).
+El diagrama de clases muestra el diseño de implementación del patrón DAO, poniendo todo el comportamiento CRUD dentro de la clase **DAO** y requiriendo de **los objetos del modelo** extender de la clase **Persistent** (persistible).
 
 
 ### Extensión DAO para bases de datos DAODB
