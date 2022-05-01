@@ -1,6 +1,8 @@
 <?php
-namespace framework\dao;
+namespace framework\dao\db;
 
+use framework\dao\DAO;
+use framework\dao\Persistent;
 use framework\environment\Env;
 use PDO;
 

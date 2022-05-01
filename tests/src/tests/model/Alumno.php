@@ -1,11 +1,10 @@
 <?php
 namespace tests\model;
 
-use framework\dao\DAO;
-use framework\dao\Persistent;
+use framework\dao\db\PersistentDB;
 use tests\dao\AlumnoDAO;
 
-class Alumno extends Persistent
+class Alumno extends PersistentDB
 {
 
     /**
@@ -37,10 +36,10 @@ class Alumno extends Persistent
 
     /**
      * 
-     * @param DAO $dao
-     * @return DAO
+     * {@inheritDoc}
+     * @see \framework\dao\Persistent::daoFactory()
      */
-    protected function daoFactory(): DAO
+    protected function daoFactory(): AlumnoDAO
     {
         return new AlumnoDAO( $this );
     }

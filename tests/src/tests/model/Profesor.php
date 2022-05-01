@@ -1,11 +1,10 @@
 <?php
 namespace tests\model;
 
-use framework\dao\DAO;
-use framework\dao\Persistent;
+use framework\dao\db\PersistentDB;
 use tests\dao\ProfesorDAO;
 
-class Profesor extends Persistent
+class Profesor extends PersistentDB
 {
     
     /**
@@ -34,13 +33,13 @@ class Profesor extends Persistent
         $this->apellidos( $apellidos );
         $this->email( $email );
     }
-    
+
     /**
-     *
-     * @param DAO $dao
-     * @return DAO
+     * 
+     * {@inheritDoc}
+     * @see \framework\dao\Persistent::daoFactory()
      */
-    protected function daoImplement( DAO $dao ): DAO
+    protected function daoFactory(): ProfesorDAO
     {
         return new ProfesorDAO( $this );
     }

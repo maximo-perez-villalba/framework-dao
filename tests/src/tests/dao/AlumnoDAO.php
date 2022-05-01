@@ -1,7 +1,7 @@
 <?php
 namespace tests\dao;
 
-use framework\dao\DAODB;
+use framework\dao\db\DAODB;
 use tests\model\Alumno;
 
 class AlumnoDAO extends DAODB

@@ -1,11 +1,10 @@
 <?php
 namespace tests\model;
 
-use framework\dao\DAO;
-use framework\dao\Persistent;
+use framework\dao\db\PersistentDB;
 use tests\dao\MateriaDAO;
 
-class Materia extends Persistent
+class Materia extends PersistentDB
 {
 
     /**
@@ -28,13 +27,13 @@ class Materia extends Persistent
         $this->codigo( $codigo );
         $this->nombre( $nombre );
     }
-    
+
     /**
-     *
-     * @param DAO $dao
-     * @return DAO
+     * 
+     * {@inheritDoc}
+     * @see \framework\dao\Persistent::daoFactory()
      */
-    protected function daoImplement( DAO $dao ): DAO
+    protected function daoFactory(): MateriaDAO
     {
         return new MateriaDAO( $this );
     }
