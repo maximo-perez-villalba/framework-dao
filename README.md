@@ -34,9 +34,11 @@ composer update
 ![image:uml-class-dao-db.png](/docs/uml-class-dao-db.png)
 
 
-### UML Sequence Diagram > DAODB::create
+#### DAODB::create
+##### UML diagram sequence
 ![image:uml-sequence-daodb-create.png](/docs/uml-sequence-daodb-create.png)
 ```
+##### PHP script sequence
 <?php
 $alumno = new Alumno( 0, 'Azalea', 'Rojas', 'azalea.rojas@prueba.com' );
 {
