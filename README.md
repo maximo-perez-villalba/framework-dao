@@ -38,13 +38,13 @@ composer update
 ```
 <?php
 $alumno = new Alumno( 0, 'Azalea', 'Rojas', 'azalea.rojas@prueba.com' );
-$dao = $alumno->dao();
-$dao->create();
-> $dao->insert();
->> $conn = $dao->connection();
->>> $statement = $conn->prepare($sqlQuery);
->>> $statement->execute( $parameters );
->>> $statement->closeCursor();
->> $lastUid = $conn->lastInsertId();
+> $dao = $alumno->dao();
+> $dao->create();
+>> $dao->insert();
+>>> $conn = $dao->connection();
+>>>> $statement = $conn->prepare($sqlQuery);
+>>>> $statement->execute( $parameters );
+>>>> $statement->closeCursor();
+>>> $lastUid = $conn->lastInsertId();
 $alumno->uid($lastUid);
 ```
