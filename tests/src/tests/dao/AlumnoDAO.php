@@ -71,12 +71,12 @@ class AlumnoDAO extends DAODB
         
         $results = $statement->execute( $parameters );
         
+        $statement->closeCursor();
+
         /*
          * Asigna el identificador de bd
          */
         $this->object()->uid( self::connection()->lastInsertId() );
-        
-        $statement->closeCursor();
         
         return $results;
     }

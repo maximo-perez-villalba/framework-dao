@@ -5,7 +5,7 @@ try
 {
     $alumno = new Alumno( 0, 'Marcos', 'Baldivia', 'marcos.baldivia@prueba.com' );
     
-    $alumno->dao()->insert();
+    $alumno->dao()->create();
     
     print "<h6>Insert the record with uid {$alumno->uid()} in the table {$alumno->dao()->getTableName()}.</h6>";
     print '<hr>';
