@@ -33,5 +33,5 @@ composer update
 ![UML Classes Diagram](/docs/uml-class-dao-db.png)
 
 
-### UML Sequence Diagram
-![UML Sequence Diagram](/docs/uml-sequence-daodb-insert.png)
+### UML Sequence Diagram > DAODB::create
+![UML Sequence Diagram](/docs/uml-sequence-daodb-create.png)
