@@ -1,5 +1,5 @@
 <?php 
-use tests\model\Alumno;
+use demo\model\Alumno;
 
 try
 {

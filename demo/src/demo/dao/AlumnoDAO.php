@@ -1,8 +1,8 @@
 <?php
-namespace tests\dao;
+namespace demo\dao;
 
+use demo\model\Alumno;
 use framework\dao\db\DAODB;
-use tests\model\Alumno;
 
 class AlumnoDAO extends DAODB
 {
@@ -116,7 +116,7 @@ class AlumnoDAO extends DAODB
     /**
      * 
      * @param string $pattern
-     * @return Persistent[]
+     * @return Alumno[]
      */
     static public function ListByEmail( string $pattern ): array
     {

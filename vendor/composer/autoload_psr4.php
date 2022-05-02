@@ -6,8 +6,8 @@ $vendorDir = dirname(__DIR__);
 $baseDir = dirname($vendorDir);
 
 return array(
-    'tests\\' => array($baseDir . '/tests/src/tests'),
     'framework\\dao\\' => array($baseDir . '/src/framework/dao'),
     'framework\\' => array($vendorDir . '/maximo-perez-villalba/framework-environment/src/framework'),
+    'demo\\' => array($baseDir . '/demo/src/demo'),
     'cebe\\markdown\\' => array($vendorDir . '/cebe/markdown'),
 );

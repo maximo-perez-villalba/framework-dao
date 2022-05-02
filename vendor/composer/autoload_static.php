@@ -7,14 +7,14 @@ namespace Composer\Autoload;
 class ComposerStaticInit9318c7d63734bf84d105fd3ba76e3cf5
 {
     public static $prefixLengthsPsr4 = array (
-        't' => 
-        array (
-            'tests\\' => 6,
-        ),
         'f' => 
         array (
             'framework\\dao\\' => 14,
             'framework\\' => 10,
+        ),
+        'd' => 
+        array (
+            'demo\\' => 5,
         ),
         'c' => 
         array (
@@ -23,10 +23,6 @@ class ComposerStaticInit9318c7d63734bf84d105fd3ba76e3cf5
     );
 
     public static $prefixDirsPsr4 = array (
-        'tests\\' => 
-        array (
-            0 => __DIR__ . '/../..' . '/tests/src/tests',
-        ),
         'framework\\dao\\' => 
         array (
             0 => __DIR__ . '/../..' . '/src/framework/dao',
@@ -34,6 +30,10 @@ class ComposerStaticInit9318c7d63734bf84d105fd3ba76e3cf5
         'framework\\' => 
         array (
             0 => __DIR__ . '/..' . '/maximo-perez-villalba/framework-environment/src/framework',
+        ),
+        'demo\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/demo/src/demo',
         ),
         'cebe\\markdown\\' => 
         array (

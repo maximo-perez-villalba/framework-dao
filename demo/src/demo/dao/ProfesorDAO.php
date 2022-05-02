@@ -1,8 +1,8 @@
 <?php
-namespace tests\dao;
+namespace demo\dao;
 
+use demo\model\Profesor;
 use framework\dao\db\DAODB;
-use tests\model\Profesor;
 
 class ProfesorDAO extends DAODB
 {
@@ -31,7 +31,9 @@ class ProfesorDAO extends DAODB
      * @return Profesor
      */
     public static function dataToObject( array $data ): Profesor
-    {}
+    {
+        return [];
+    }
     
     /**
      *
@@ -39,6 +41,11 @@ class ProfesorDAO extends DAODB
      */
     public function insert(): bool
     {
-        
+        return FALSE;
     }
+    public function update(): bool
+    {
+        return FALSE;
+    }
+
 }

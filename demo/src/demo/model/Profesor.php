@@ -1,29 +1,29 @@
 <?php
-namespace tests\model;
+namespace demo\model;
 
+use demo\dao\ProfesorDAO;
 use framework\dao\db\PersistentDB;
-use tests\dao\AlumnoDAO;
 
-class Alumno extends PersistentDB
+class Profesor extends PersistentDB
 {
-
+    
     /**
      * @var string
      */
     private $nombres;
-
+    
     /**
      * @var string
      */
     private $apellidos;
-
+    
     /**
      * @var string
      */
     private $email;
-
+    
     /**
-     * 
+     *
      * @param int $uid
      */
     public function __construct( int $uid, string $nombres, string $apellidos, string $email )
@@ -39,23 +39,13 @@ class Alumno extends PersistentDB
      * {@inheritDoc}
      * @see \framework\dao\Persistent::daoFactory()
      */
-    protected function daoFactory(): AlumnoDAO
+    protected function daoFactory(): ProfesorDAO
     {
-        return new AlumnoDAO( $this );
+        return new ProfesorDAO( $this );
     }
-
+    
     /**
-     * 
-     * {@inheritDoc}
-     * @see \framework\dao\Persistent::dao()
-     */
-    public function dao(): AlumnoDAO
-    {
-        return parent::dao();
-    }
-
-    /**
-     * 
+     *
      * @param string $nombres
      * @return string
      */
@@ -69,7 +59,7 @@ class Alumno extends PersistentDB
     }
     
     /**
-     * 
+     *
      * @param string $apellidos
      * @return string
      */
@@ -83,7 +73,7 @@ class Alumno extends PersistentDB
     }
     
     /**
-     * 
+     *
      * @param string $email
      * @return string
      */
@@ -95,5 +85,4 @@ class Alumno extends PersistentDB
         }
         return $this->email;
     }
-    
 }

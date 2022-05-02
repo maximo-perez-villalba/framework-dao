@@ -1,10 +1,10 @@
 <?php
-namespace tests\dao;
+namespace demo\dao;
 
+use demo\model\Materia;
 use framework\dao\db\DAODB;
-use tests\model\Materia;
 
-class MateriaDAO extends DAODB
+class MateriaDAO extends DAODB   
 {
 
     /**
@@ -31,14 +31,28 @@ class MateriaDAO extends DAODB
      * @return Materia
      */
     public static function dataToObject( array $data ): Materia
-    {}
-    
+    {
+        return [];
+    }
+
     /**
-     *
-     * @return bool
+     * 
+     * {@inheritDoc}
+     * @see \framework\dao\db\DAODB::insert()
      */
     public function insert(): bool
     {
-        
+        return FALSE;
     }
+    
+    /**
+     * 
+     * {@inheritDoc}
+     * @see \framework\dao\DAO::update()
+     */
+    public function update(): bool
+    {
+        return FALSE;
+    }
+
 }

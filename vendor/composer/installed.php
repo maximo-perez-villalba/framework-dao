@@ -1,7 +1,7 @@
 <?php return array(
     'root' => array(
-        'pretty_version' => '0.9.0',
-        'version' => '0.9.0.0',
+        'pretty_version' => '1.2.3',
+        'version' => '1.2.3.0',
         'type' => 'library',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
@@ -20,8 +20,8 @@
             'dev_requirement' => false,
         ),
         'maximo-perez-villalba/framework-dao' => array(
-            'pretty_version' => '0.9.0',
-            'version' => '0.9.0.0',
+            'pretty_version' => '1.2.3',
+            'version' => '1.2.3.0',
             'type' => 'library',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),

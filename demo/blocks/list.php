@@ -1,5 +1,5 @@
 <?php
-use tests\dao\AlumnoDAO;
+use demo\dao\AlumnoDAO;
 
 try 
 {

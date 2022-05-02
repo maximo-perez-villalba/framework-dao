@@ -1,8 +1,8 @@
 <?php
-namespace tests\model;
+namespace demo\model;
 
+use demo\dao\MateriaDAO;
 use framework\dao\db\PersistentDB;
-use tests\dao\MateriaDAO;
 
 class Materia extends PersistentDB
 {
