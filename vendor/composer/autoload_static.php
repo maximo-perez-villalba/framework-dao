@@ -12,14 +12,6 @@ class ComposerStaticInit9318c7d63734bf84d105fd3ba76e3cf5
             'framework\\dao\\' => 14,
             'framework\\' => 10,
         ),
-        'd' => 
-        array (
-            'demo\\' => 5,
-        ),
-        'c' => 
-        array (
-            'cebe\\markdown\\' => 14,
-        ),
     );
 
     public static $prefixDirsPsr4 = array (
@@ -30,14 +22,6 @@ class ComposerStaticInit9318c7d63734bf84d105fd3ba76e3cf5
         'framework\\' => 
         array (
             0 => __DIR__ . '/..' . '/maximo-perez-villalba/framework-environment/src/framework',
-        ),
-        'demo\\' => 
-        array (
-            0 => __DIR__ . '/../..' . '/demo/src/demo',
-        ),
-        'cebe\\markdown\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/cebe/markdown',
         ),
     );
 
