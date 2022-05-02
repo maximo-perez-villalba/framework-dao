@@ -6,18 +6,18 @@ El framework esta basado en el patrón de diseño DAO (Data Access Object) y  su
 ## Instalación
 Se puede instalar `framework-dao` a través de Composer.
 
-1. Desde una consola de comandos ir al directorio del proyecto y ejecutar:
+1 Desde una consola de comandos ir al directorio del proyecto y ejecutar:
 ```
 composer require maximo-perez-villalba/framework-dao
 ```
 
-2. También agregando en el archivo `composer.json`, dentro de la sección  `"require"`.
+2 También agregando en el archivo `composer.json`, dentro de la sección  `"require"`.
 ```
 "require": {
   "maximo-perez-villalba/framework-dao": ">=1.0.0"
 },
 ```
-Luego desde una consola de comandos ejecutar:
+2.1 Luego desde una consola de comandos ejecutar:
 ```
 composer update
 ```
