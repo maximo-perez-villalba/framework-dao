@@ -1,6 +1,6 @@
 # framework-dao
 El proyecto implementa un framework liviano de persistencia orientado a objectos escrito en PHP. 
-El framework esta basado en el patrón de diseño DAO (Data Access Object) y aunque su principal fin es pedagógico, el framework es completamente funcional.
+El framework esta basado en el patrón de diseño DAO (Data Access Object) y  su fin principal es de apoyo pedagógico.
 
 
 ## Instalación
@@ -66,39 +66,6 @@ $list = DAO::read( 'filtro/s de selección', ['argumento1'=>'value1', 'argumento
 
 De esta manera la clase DAO expone una interfaz de alto nivel, que permite desacoplar **los objetos del modelo** del **medio de almacenamiento**, como así también de la implementación específica para cada medio de almacenamiento.
 
-Este proyecto contiene la implementación del patrón DAO más la extensión para persistir en bases de datos.
+Este proyecto contiene la implementación del patrón DAO en su forma generica. para poder usarlo es necesario hacerlo a través de alguno de sus extensiones.
+* [DAODB](https://github.com/maximo-perez-villalba/framework-dao-db): Extensión de framework-dao para base de datos a través de PDO. 
 
-
-### Extensión DAO para bases de datos (DAODB)
-
-![image:uml-class-dao-db.png](/docs/uml-class-dao-db.png)
-
-
-
-
-
-#### DAODB::create
-
-##### UML diagram sequence
-![image:uml-sequence-daodb-create.png](/docs/uml-sequence-daodb-create.png)
-
-##### PHP script sequence
-```
-<?php
-$alumno = new Alumno( 0, 'Azalea', 'Rojas', 'azalea.rojas@prueba.com' );
-{
-  $dao = $this->dao();
-  $dao->create()
-  {
-    $this->insert()
-    {
-      $conn = $this->connection();    
-      $statement = $conn->prepare($sqlQuery);
-      $statement->execute( $parameters );
-      $statement->closeCursor();
-      $lastUid = $conn->lastInsertId();
-      $this->object()->uid($lastUid);
-    }
-  }
-}
-```

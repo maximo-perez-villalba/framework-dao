@@ -9,22 +9,17 @@
 			"email": "maximo.villalba@gmail.com"
 		}
 	],
-	"version": "1.3.0",
+	"version": "1.4.0",
 	"minimum-stability": "stable",
 	"autoload": {
 		"psr-4": {
 			"framework\\dao\\": "src/framework/dao/"
 		}
 	},
-	"autoload-dev": {
-		"psr-4": {
-			"demo\\": "demo/src/demo/"
-		}
-	},
+	"autoload-dev": {},
 	"require": {
 		"php": ">=7.4",
-		"maximo-perez-villalba/framework-environment": ">=1",
-		"cebe/markdown": "~1.2.0"
+		"maximo-perez-villalba/framework-environment": ">=1"
 	},
 	"require-dev": {},
 	"prefer-stable": true
