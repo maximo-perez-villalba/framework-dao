@@ -6,18 +6,18 @@ El framework esta basado en el patrón de diseño DAO (Data Access Object) y  su
 ## Instalación
 Se puede instalar `framework-dao` a través de Composer.
 
-1. Desde una consola de comandos ir al directorio del proyecto y ejecutar:
+1 Desde una consola de comandos ir al directorio del proyecto y ejecutar:
 ```
 composer require maximo-perez-villalba/framework-dao
 ```
 
-2. También agregando en el archivo `composer.json`, dentro de la sección  `"require"`.
+2 También agregando en el archivo `composer.json`, dentro de la sección  `"require"`.
 ```
 "require": {
   "maximo-perez-villalba/framework-dao": ">=1.0.0"
 },
 ```
-Luego desde una consola de comandos ejecutar:
+2.1 Luego desde una consola de comandos ejecutar:
 ```
 composer update
 ```
@@ -66,6 +66,10 @@ $list = DAO::read( 'filtro/s de selección', ['argumento1'=>'value1', 'argumento
 
 De esta manera la clase DAO expone una interfaz de alto nivel, que permite desacoplar **los objetos del modelo** del **medio de almacenamiento**, como así también de la implementación específica para cada medio de almacenamiento.
 
-Este proyecto contiene la implementación del patrón DAO en su forma generica. para poder usarlo es necesario hacerlo a través de alguno de sus extensiones.
+
+### DAO Extensiones
+Este proyecto contiene la implementación del patrón DAO en su forma generica. Para poder usarlo es necesario hacerlo a través de algunas de sus extensiones específicas según cada medio de almacenamiento.
+
+Listado de DAO extensiones:
 * [DAODB](https://github.com/maximo-perez-villalba/framework-dao-db): Extensión de framework-dao para base de datos a través de PDO. 
 
