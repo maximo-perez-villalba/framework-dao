@@ -72,4 +72,5 @@ Este proyecto contiene la implementación del patrón DAO en su forma generica. 
 
 Listado de DAO extensiones:
 * [DAODB](https://github.com/maximo-perez-villalba/framework-dao-db): Extensión de framework-dao para base de datos a través de PDO. 
+* [DAOJson](https://github.com/maximo-perez-villalba/framework-dao-json): Extensión de framework-dao para persistencia de objetos en archivos con formato Json. 
 
